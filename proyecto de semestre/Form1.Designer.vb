@@ -23,18 +23,32 @@ Partial Class frmMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.pnlLeftSize = New System.Windows.Forms.Panel()
+        Me.pnlComentarios = New System.Windows.Forms.Panel()
+        Me.btnComentarios = New System.Windows.Forms.Button()
         Me.pnlBebidas = New System.Windows.Forms.Panel()
         Me.btnBebidas = New System.Windows.Forms.Button()
         Me.pnlPostres = New System.Windows.Forms.Panel()
         Me.btnPostres = New System.Windows.Forms.Button()
         Me.pnlNosotros = New System.Windows.Forms.Panel()
-        Me.btnNosotros = New System.Windows.Forms.Button()
+        Me.btnInicio = New System.Windows.Forms.Button()
         Me.pnlCarrito = New System.Windows.Forms.Panel()
         Me.btnCarrito = New System.Windows.Forms.Button()
         Me.pnlComida = New System.Windows.Forms.Panel()
         Me.btnComida = New System.Windows.Forms.Button()
         Me.pnlTopSize = New System.Windows.Forms.Panel()
         Me.pnlindxComidas = New System.Windows.Forms.Panel()
+        Me.nudHotDog = New System.Windows.Forms.NumericUpDown()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.nudNugget = New System.Windows.Forms.NumericUpDown()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.nudBrochetas = New System.Windows.Forms.NumericUpDown()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.nudBurrito = New System.Windows.Forms.NumericUpDown()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.nudHamburguesa = New System.Windows.Forms.NumericUpDown()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.nudPizza = New System.Windows.Forms.NumericUpDown()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.btnAggComida = New System.Windows.Forms.Button()
         Me.pnlHotDog = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -55,6 +69,19 @@ Partial Class frmMenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnPizza = New System.Windows.Forms.Button()
         Me.pnlIndxBebidas = New System.Windows.Forms.Panel()
+        Me.nudTe = New System.Windows.Forms.NumericUpDown()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.nudCerveza = New System.Windows.Forms.NumericUpDown()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.nudAgua = New System.Windows.Forms.NumericUpDown()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.nudCafe = New System.Windows.Forms.NumericUpDown()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.nudJugo = New System.Windows.Forms.NumericUpDown()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.nudRefresco = New System.Windows.Forms.NumericUpDown()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.btnAggBebidas = New System.Windows.Forms.Button()
         Me.pnlTe = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnTe = New System.Windows.Forms.Button()
@@ -73,23 +100,46 @@ Partial Class frmMenu
         Me.pnlRefrescos = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.btnRefresco = New System.Windows.Forms.Button()
-        Me.pnlindixPostres = New System.Windows.Forms.Panel()
-        Me.pnlPay = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.btnPay = New System.Windows.Forms.Button()
-        Me.pnlHelado = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.btnHelado = New System.Windows.Forms.Button()
+        Me.pnlindixCarrito = New System.Windows.Forms.Panel()
+        Me.lblMostrarPago = New System.Windows.Forms.Label()
+        Me.btnSumaTotal = New System.Windows.Forms.Button()
+        Me.btnPago = New System.Windows.Forms.Button()
+        Me.dgvCarrito = New System.Windows.Forms.DataGridView()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.pnlindixInicio = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.pnlPastel = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.btnPastel = New System.Windows.Forms.Button()
-        Me.pnlindixCarrito = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.pnlindixNosotros = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.pnlHelado = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.btnHelado = New System.Windows.Forms.Button()
+        Me.pnlPay = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnPay = New System.Windows.Forms.Button()
+        Me.btnAggPostre = New System.Windows.Forms.Button()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.nudHelado = New System.Windows.Forms.NumericUpDown()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.nudPastel = New System.Windows.Forms.NumericUpDown()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.nudPay = New System.Windows.Forms.NumericUpDown()
+        Me.pnlindixPostres = New System.Windows.Forms.Panel()
+        Me.pnlindixComentario = New System.Windows.Forms.Panel()
+        Me.lblComentarios = New System.Windows.Forms.Label()
+        Me.lblMensaje = New System.Windows.Forms.Label()
+        Me.txtComentario = New System.Windows.Forms.TextBox()
+        Me.btnMostrarComentario = New System.Windows.Forms.Button()
+        Me.btnComentario = New System.Windows.Forms.Button()
         Me.pnlLeftSize.SuspendLayout()
         Me.pnlindxComidas.SuspendLayout()
+        CType(Me.nudHotDog, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudNugget, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudBrochetas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudBurrito, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudHamburguesa, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudPizza, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlHotDog.SuspendLayout()
         Me.pnlNuggets.SuspendLayout()
         Me.pnlBurrito.SuspendLayout()
@@ -97,30 +147,43 @@ Partial Class frmMenu
         Me.pnlHamburguesa.SuspendLayout()
         Me.pnlPizza.SuspendLayout()
         Me.pnlIndxBebidas.SuspendLayout()
+        CType(Me.nudTe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudCerveza, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudAgua, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudCafe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudJugo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudRefresco, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTe.SuspendLayout()
         Me.pnlCerveza.SuspendLayout()
         Me.pnlCafe.SuspendLayout()
         Me.pnlAgua.SuspendLayout()
         Me.pnlJugos.SuspendLayout()
         Me.pnlRefrescos.SuspendLayout()
-        Me.pnlindixPostres.SuspendLayout()
-        Me.pnlPay.SuspendLayout()
-        Me.pnlHelado.SuspendLayout()
-        Me.pnlPastel.SuspendLayout()
         Me.pnlindixCarrito.SuspendLayout()
-        Me.pnlindixNosotros.SuspendLayout()
+        CType(Me.dgvCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlindixInicio.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlPastel.SuspendLayout()
+        Me.pnlHelado.SuspendLayout()
+        Me.pnlPay.SuspendLayout()
+        CType(Me.nudHelado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudPastel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudPay, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlindixPostres.SuspendLayout()
+        Me.pnlindixComentario.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlLeftSize
         '
         Me.pnlLeftSize.BackColor = System.Drawing.Color.Red
+        Me.pnlLeftSize.Controls.Add(Me.pnlComentarios)
+        Me.pnlLeftSize.Controls.Add(Me.btnComentarios)
         Me.pnlLeftSize.Controls.Add(Me.pnlBebidas)
         Me.pnlLeftSize.Controls.Add(Me.btnBebidas)
         Me.pnlLeftSize.Controls.Add(Me.pnlPostres)
         Me.pnlLeftSize.Controls.Add(Me.btnPostres)
         Me.pnlLeftSize.Controls.Add(Me.pnlNosotros)
-        Me.pnlLeftSize.Controls.Add(Me.btnNosotros)
+        Me.pnlLeftSize.Controls.Add(Me.btnInicio)
         Me.pnlLeftSize.Controls.Add(Me.pnlCarrito)
         Me.pnlLeftSize.Controls.Add(Me.btnCarrito)
         Me.pnlLeftSize.Controls.Add(Me.pnlComida)
@@ -131,10 +194,32 @@ Partial Class frmMenu
         Me.pnlLeftSize.Size = New System.Drawing.Size(200, 498)
         Me.pnlLeftSize.TabIndex = 0
         '
+        'pnlComentarios
+        '
+        Me.pnlComentarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.pnlComentarios.Location = New System.Drawing.Point(3, 448)
+        Me.pnlComentarios.Name = "pnlComentarios"
+        Me.pnlComentarios.Size = New System.Drawing.Size(10, 45)
+        Me.pnlComentarios.TabIndex = 13
+        '
+        'btnComentarios
+        '
+        Me.btnComentarios.FlatAppearance.BorderSize = 0
+        Me.btnComentarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnComentarios.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnComentarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnComentarios.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnComentarios.Location = New System.Drawing.Point(12, 448)
+        Me.btnComentarios.Name = "btnComentarios"
+        Me.btnComentarios.Size = New System.Drawing.Size(220, 45)
+        Me.btnComentarios.TabIndex = 12
+        Me.btnComentarios.Text = "RESEÑAS"
+        Me.btnComentarios.UseVisualStyleBackColor = True
+        '
         'pnlBebidas
         '
         Me.pnlBebidas.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.pnlBebidas.Location = New System.Drawing.Point(3, 194)
+        Me.pnlBebidas.Location = New System.Drawing.Point(0, 217)
         Me.pnlBebidas.Name = "pnlBebidas"
         Me.pnlBebidas.Size = New System.Drawing.Size(10, 45)
         Me.pnlBebidas.TabIndex = 11
@@ -147,7 +232,7 @@ Partial Class frmMenu
         Me.btnBebidas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnBebidas.Image = Global.proyecto_de_semestre.My.Resources.Resources.bebidas
         Me.btnBebidas.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnBebidas.Location = New System.Drawing.Point(15, 192)
+        Me.btnBebidas.Location = New System.Drawing.Point(15, 215)
         Me.btnBebidas.Name = "btnBebidas"
         Me.btnBebidas.Size = New System.Drawing.Size(203, 53)
         Me.btnBebidas.TabIndex = 10
@@ -157,7 +242,7 @@ Partial Class frmMenu
         'pnlPostres
         '
         Me.pnlPostres.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.pnlPostres.Location = New System.Drawing.Point(0, 260)
+        Me.pnlPostres.Location = New System.Drawing.Point(0, 283)
         Me.pnlPostres.Name = "pnlPostres"
         Me.pnlPostres.Size = New System.Drawing.Size(10, 45)
         Me.pnlPostres.TabIndex = 9
@@ -170,7 +255,7 @@ Partial Class frmMenu
         Me.btnPostres.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnPostres.Image = Global.proyecto_de_semestre.My.Resources.Resources.postres
         Me.btnPostres.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnPostres.Location = New System.Drawing.Point(12, 259)
+        Me.btnPostres.Location = New System.Drawing.Point(12, 282)
         Me.btnPostres.Name = "btnPostres"
         Me.btnPostres.Size = New System.Drawing.Size(203, 59)
         Me.btnPostres.TabIndex = 8
@@ -180,30 +265,30 @@ Partial Class frmMenu
         'pnlNosotros
         '
         Me.pnlNosotros.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.pnlNosotros.Location = New System.Drawing.Point(3, 6)
+        Me.pnlNosotros.Location = New System.Drawing.Point(0, 31)
         Me.pnlNosotros.Name = "pnlNosotros"
         Me.pnlNosotros.Size = New System.Drawing.Size(10, 45)
         Me.pnlNosotros.TabIndex = 7
         '
-        'btnNosotros
+        'btnInicio
         '
-        Me.btnNosotros.FlatAppearance.BorderSize = 0
-        Me.btnNosotros.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNosotros.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNosotros.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnNosotros.Image = Global.proyecto_de_semestre.My.Resources.Resources.nosotros
-        Me.btnNosotros.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnNosotros.Location = New System.Drawing.Point(15, 6)
-        Me.btnNosotros.Name = "btnNosotros"
-        Me.btnNosotros.Size = New System.Drawing.Size(220, 45)
-        Me.btnNosotros.TabIndex = 6
-        Me.btnNosotros.Text = "Inicio "
-        Me.btnNosotros.UseVisualStyleBackColor = True
+        Me.btnInicio.FlatAppearance.BorderSize = 0
+        Me.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInicio.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnInicio.Image = Global.proyecto_de_semestre.My.Resources.Resources.nosotros
+        Me.btnInicio.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnInicio.Location = New System.Drawing.Point(12, 34)
+        Me.btnInicio.Name = "btnInicio"
+        Me.btnInicio.Size = New System.Drawing.Size(220, 45)
+        Me.btnInicio.TabIndex = 6
+        Me.btnInicio.Text = "Inicio "
+        Me.btnInicio.UseVisualStyleBackColor = True
         '
         'pnlCarrito
         '
         Me.pnlCarrito.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.pnlCarrito.Location = New System.Drawing.Point(3, 441)
+        Me.pnlCarrito.Location = New System.Drawing.Point(0, 353)
         Me.pnlCarrito.Name = "pnlCarrito"
         Me.pnlCarrito.Size = New System.Drawing.Size(10, 45)
         Me.pnlCarrito.TabIndex = 5
@@ -216,7 +301,7 @@ Partial Class frmMenu
         Me.btnCarrito.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCarrito.Image = Global.proyecto_de_semestre.My.Resources.Resources.carrito_de_compras
         Me.btnCarrito.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnCarrito.Location = New System.Drawing.Point(15, 441)
+        Me.btnCarrito.Location = New System.Drawing.Point(12, 353)
         Me.btnCarrito.Name = "btnCarrito"
         Me.btnCarrito.Size = New System.Drawing.Size(220, 45)
         Me.btnCarrito.TabIndex = 4
@@ -226,7 +311,7 @@ Partial Class frmMenu
         'pnlComida
         '
         Me.pnlComida.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.pnlComida.Location = New System.Drawing.Point(0, 131)
+        Me.pnlComida.Location = New System.Drawing.Point(0, 154)
         Me.pnlComida.Name = "pnlComida"
         Me.pnlComida.Size = New System.Drawing.Size(10, 45)
         Me.pnlComida.TabIndex = 3
@@ -239,7 +324,7 @@ Partial Class frmMenu
         Me.btnComida.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnComida.Image = Global.proyecto_de_semestre.My.Resources.Resources.pngwing_com__2_
         Me.btnComida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnComida.Location = New System.Drawing.Point(12, 131)
+        Me.btnComida.Location = New System.Drawing.Point(12, 154)
         Me.btnComida.Name = "btnComida"
         Me.btnComida.Size = New System.Drawing.Size(203, 46)
         Me.btnComida.TabIndex = 1
@@ -259,6 +344,18 @@ Partial Class frmMenu
         'pnlindxComidas
         '
         Me.pnlindxComidas.BackColor = System.Drawing.Color.Gainsboro
+        Me.pnlindxComidas.Controls.Add(Me.nudHotDog)
+        Me.pnlindxComidas.Controls.Add(Me.Label21)
+        Me.pnlindxComidas.Controls.Add(Me.nudNugget)
+        Me.pnlindxComidas.Controls.Add(Me.Label22)
+        Me.pnlindxComidas.Controls.Add(Me.nudBrochetas)
+        Me.pnlindxComidas.Controls.Add(Me.Label23)
+        Me.pnlindxComidas.Controls.Add(Me.nudBurrito)
+        Me.pnlindxComidas.Controls.Add(Me.Label20)
+        Me.pnlindxComidas.Controls.Add(Me.nudHamburguesa)
+        Me.pnlindxComidas.Controls.Add(Me.Label19)
+        Me.pnlindxComidas.Controls.Add(Me.nudPizza)
+        Me.pnlindxComidas.Controls.Add(Me.Label18)
         Me.pnlindxComidas.Controls.Add(Me.btnAggComida)
         Me.pnlindxComidas.Controls.Add(Me.pnlHotDog)
         Me.pnlindxComidas.Controls.Add(Me.pnlNuggets)
@@ -271,12 +368,108 @@ Partial Class frmMenu
         Me.pnlindxComidas.Size = New System.Drawing.Size(683, 460)
         Me.pnlindxComidas.TabIndex = 3
         '
+        'nudHotDog
+        '
+        Me.nudHotDog.Location = New System.Drawing.Point(591, 405)
+        Me.nudHotDog.Name = "nudHotDog"
+        Me.nudHotDog.Size = New System.Drawing.Size(76, 22)
+        Me.nudHotDog.TabIndex = 20
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(488, 402)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(114, 29)
+        Me.Label21.TabIndex = 19
+        Me.Label21.Text = "Cantidad"
+        '
+        'nudNugget
+        '
+        Me.nudNugget.Location = New System.Drawing.Point(361, 405)
+        Me.nudNugget.Name = "nudNugget"
+        Me.nudNugget.Size = New System.Drawing.Size(76, 22)
+        Me.nudNugget.TabIndex = 18
+        '
+        'Label22
+        '
+        Me.Label22.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(258, 402)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(114, 29)
+        Me.Label22.TabIndex = 17
+        Me.Label22.Text = "Cantidad"
+        '
+        'nudBrochetas
+        '
+        Me.nudBrochetas.Location = New System.Drawing.Point(119, 405)
+        Me.nudBrochetas.Name = "nudBrochetas"
+        Me.nudBrochetas.Size = New System.Drawing.Size(76, 22)
+        Me.nudBrochetas.TabIndex = 16
+        '
+        'Label23
+        '
+        Me.Label23.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(16, 402)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(114, 29)
+        Me.Label23.TabIndex = 15
+        Me.Label23.Text = "Cantidad"
+        '
+        'nudBurrito
+        '
+        Me.nudBurrito.Location = New System.Drawing.Point(591, 191)
+        Me.nudBurrito.Name = "nudBurrito"
+        Me.nudBurrito.Size = New System.Drawing.Size(76, 22)
+        Me.nudBurrito.TabIndex = 14
+        '
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(488, 188)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(114, 29)
+        Me.Label20.TabIndex = 13
+        Me.Label20.Text = "Cantidad"
+        '
+        'nudHamburguesa
+        '
+        Me.nudHamburguesa.Location = New System.Drawing.Point(361, 191)
+        Me.nudHamburguesa.Name = "nudHamburguesa"
+        Me.nudHamburguesa.Size = New System.Drawing.Size(76, 22)
+        Me.nudHamburguesa.TabIndex = 12
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(258, 188)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(114, 29)
+        Me.Label19.TabIndex = 11
+        Me.Label19.Text = "Cantidad"
+        '
+        'nudPizza
+        '
+        Me.nudPizza.Location = New System.Drawing.Point(119, 191)
+        Me.nudPizza.Name = "nudPizza"
+        Me.nudPizza.Size = New System.Drawing.Size(76, 22)
+        Me.nudPizza.TabIndex = 10
+        '
+        'Label18
+        '
+        Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(16, 188)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(114, 29)
+        Me.Label18.TabIndex = 9
+        Me.Label18.Text = "Cantidad"
+        '
         'btnAggComida
         '
         Me.btnAggComida.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAggComida.Location = New System.Drawing.Point(581, 420)
+        Me.btnAggComida.Location = New System.Drawing.Point(556, 433)
         Me.btnAggComida.Name = "btnAggComida"
-        Me.btnAggComida.Size = New System.Drawing.Size(96, 34)
+        Me.btnAggComida.Size = New System.Drawing.Size(100, 24)
         Me.btnAggComida.TabIndex = 8
         Me.btnAggComida.Text = "AGREGAR"
         Me.btnAggComida.UseVisualStyleBackColor = True
@@ -469,6 +662,19 @@ Partial Class frmMenu
         '
         'pnlIndxBebidas
         '
+        Me.pnlIndxBebidas.Controls.Add(Me.nudTe)
+        Me.pnlIndxBebidas.Controls.Add(Me.Label24)
+        Me.pnlIndxBebidas.Controls.Add(Me.nudCerveza)
+        Me.pnlIndxBebidas.Controls.Add(Me.Label25)
+        Me.pnlIndxBebidas.Controls.Add(Me.nudAgua)
+        Me.pnlIndxBebidas.Controls.Add(Me.Label26)
+        Me.pnlIndxBebidas.Controls.Add(Me.nudCafe)
+        Me.pnlIndxBebidas.Controls.Add(Me.Label27)
+        Me.pnlIndxBebidas.Controls.Add(Me.nudJugo)
+        Me.pnlIndxBebidas.Controls.Add(Me.Label28)
+        Me.pnlIndxBebidas.Controls.Add(Me.nudRefresco)
+        Me.pnlIndxBebidas.Controls.Add(Me.Label29)
+        Me.pnlIndxBebidas.Controls.Add(Me.btnAggBebidas)
         Me.pnlIndxBebidas.Controls.Add(Me.pnlTe)
         Me.pnlIndxBebidas.Controls.Add(Me.pnlCerveza)
         Me.pnlIndxBebidas.Controls.Add(Me.pnlCafe)
@@ -479,6 +685,112 @@ Partial Class frmMenu
         Me.pnlIndxBebidas.Name = "pnlIndxBebidas"
         Me.pnlIndxBebidas.Size = New System.Drawing.Size(683, 461)
         Me.pnlIndxBebidas.TabIndex = 4
+        '
+        'nudTe
+        '
+        Me.nudTe.Location = New System.Drawing.Point(588, 404)
+        Me.nudTe.Name = "nudTe"
+        Me.nudTe.Size = New System.Drawing.Size(76, 22)
+        Me.nudTe.TabIndex = 33
+        '
+        'Label24
+        '
+        Me.Label24.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(485, 401)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(114, 29)
+        Me.Label24.TabIndex = 32
+        Me.Label24.Text = "Cantidad"
+        '
+        'nudCerveza
+        '
+        Me.nudCerveza.Location = New System.Drawing.Point(358, 404)
+        Me.nudCerveza.Name = "nudCerveza"
+        Me.nudCerveza.Size = New System.Drawing.Size(76, 22)
+        Me.nudCerveza.TabIndex = 31
+        '
+        'Label25
+        '
+        Me.Label25.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(255, 401)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(114, 29)
+        Me.Label25.TabIndex = 30
+        Me.Label25.Text = "Cantidad"
+        '
+        'nudAgua
+        '
+        Me.nudAgua.Location = New System.Drawing.Point(116, 404)
+        Me.nudAgua.Name = "nudAgua"
+        Me.nudAgua.Size = New System.Drawing.Size(76, 22)
+        Me.nudAgua.TabIndex = 29
+        '
+        'Label26
+        '
+        Me.Label26.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(13, 401)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(114, 29)
+        Me.Label26.TabIndex = 28
+        Me.Label26.Text = "Cantidad"
+        '
+        'nudCafe
+        '
+        Me.nudCafe.Location = New System.Drawing.Point(588, 190)
+        Me.nudCafe.Name = "nudCafe"
+        Me.nudCafe.Size = New System.Drawing.Size(76, 22)
+        Me.nudCafe.TabIndex = 27
+        '
+        'Label27
+        '
+        Me.Label27.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(485, 187)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(114, 29)
+        Me.Label27.TabIndex = 26
+        Me.Label27.Text = "Cantidad"
+        '
+        'nudJugo
+        '
+        Me.nudJugo.Location = New System.Drawing.Point(358, 190)
+        Me.nudJugo.Name = "nudJugo"
+        Me.nudJugo.Size = New System.Drawing.Size(76, 22)
+        Me.nudJugo.TabIndex = 25
+        '
+        'Label28
+        '
+        Me.Label28.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(255, 187)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(114, 29)
+        Me.Label28.TabIndex = 24
+        Me.Label28.Text = "Cantidad"
+        '
+        'nudRefresco
+        '
+        Me.nudRefresco.Location = New System.Drawing.Point(116, 190)
+        Me.nudRefresco.Name = "nudRefresco"
+        Me.nudRefresco.Size = New System.Drawing.Size(76, 22)
+        Me.nudRefresco.TabIndex = 23
+        '
+        'Label29
+        '
+        Me.Label29.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(13, 187)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(114, 29)
+        Me.Label29.TabIndex = 22
+        Me.Label29.Text = "Cantidad"
+        '
+        'btnAggBebidas
+        '
+        Me.btnAggBebidas.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAggBebidas.Location = New System.Drawing.Point(553, 432)
+        Me.btnAggBebidas.Name = "btnAggBebidas"
+        Me.btnAggBebidas.Size = New System.Drawing.Size(100, 24)
+        Me.btnAggBebidas.TabIndex = 21
+        Me.btnAggBebidas.Text = "AGREGAR"
+        Me.btnAggBebidas.UseVisualStyleBackColor = True
         '
         'pnlTe
         '
@@ -666,77 +978,91 @@ Partial Class frmMenu
         Me.btnRefresco.TabIndex = 0
         Me.btnRefresco.UseVisualStyleBackColor = False
         '
-        'pnlindixPostres
+        'pnlindixCarrito
         '
-        Me.pnlindixPostres.Controls.Add(Me.pnlPay)
-        Me.pnlindixPostres.Controls.Add(Me.pnlHelado)
-        Me.pnlindixPostres.Controls.Add(Me.pnlPastel)
-        Me.pnlindixPostres.Location = New System.Drawing.Point(197, 34)
-        Me.pnlindixPostres.Name = "pnlindixPostres"
-        Me.pnlindixPostres.Size = New System.Drawing.Size(683, 461)
-        Me.pnlindixPostres.TabIndex = 5
+        Me.pnlindixCarrito.AutoScroll = True
+        Me.pnlindixCarrito.Controls.Add(Me.lblMostrarPago)
+        Me.pnlindixCarrito.Controls.Add(Me.btnSumaTotal)
+        Me.pnlindixCarrito.Controls.Add(Me.btnPago)
+        Me.pnlindixCarrito.Controls.Add(Me.dgvCarrito)
+        Me.pnlindixCarrito.Controls.Add(Me.Label13)
+        Me.pnlindixCarrito.Location = New System.Drawing.Point(197, 34)
+        Me.pnlindixCarrito.Name = "pnlindixCarrito"
+        Me.pnlindixCarrito.Size = New System.Drawing.Size(683, 461)
+        Me.pnlindixCarrito.TabIndex = 6
         '
-        'pnlPay
+        'lblMostrarPago
         '
-        Me.pnlPay.Controls.Add(Me.Label15)
-        Me.pnlPay.Controls.Add(Me.btnPay)
-        Me.pnlPay.Location = New System.Drawing.Point(485, 131)
-        Me.pnlPay.Name = "pnlPay"
-        Me.pnlPay.Size = New System.Drawing.Size(174, 174)
-        Me.pnlPay.TabIndex = 2
+        Me.lblMostrarPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMostrarPago.Location = New System.Drawing.Point(141, 367)
+        Me.lblMostrarPago.Name = "lblMostrarPago"
+        Me.lblMostrarPago.Size = New System.Drawing.Size(264, 60)
+        Me.lblMostrarPago.TabIndex = 13
         '
-        'Label15
+        'btnSumaTotal
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Felix Titling", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(60, 3)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(46, 24)
-        Me.Label15.TabIndex = 1
-        Me.Label15.Text = "PAY"
+        Me.btnSumaTotal.Location = New System.Drawing.Point(29, 367)
+        Me.btnSumaTotal.Name = "btnSumaTotal"
+        Me.btnSumaTotal.Size = New System.Drawing.Size(106, 60)
+        Me.btnSumaTotal.TabIndex = 11
+        Me.btnSumaTotal.Text = "Conocer Suma Total"
+        Me.btnSumaTotal.UseVisualStyleBackColor = True
         '
-        'btnPay
+        'btnPago
         '
-        Me.btnPay.BackColor = System.Drawing.Color.Gainsboro
-        Me.btnPay.FlatAppearance.BorderSize = 0
-        Me.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPay.Image = Global.proyecto_de_semestre.My.Resources.Resources.pay
-        Me.btnPay.Location = New System.Drawing.Point(3, 35)
-        Me.btnPay.Name = "btnPay"
-        Me.btnPay.Size = New System.Drawing.Size(168, 126)
-        Me.btnPay.TabIndex = 0
-        Me.btnPay.UseVisualStyleBackColor = False
+        Me.btnPago.Location = New System.Drawing.Point(473, 379)
+        Me.btnPago.Name = "btnPago"
+        Me.btnPago.Size = New System.Drawing.Size(137, 36)
+        Me.btnPago.TabIndex = 10
+        Me.btnPago.Text = "Proceder al Pago"
+        Me.btnPago.UseVisualStyleBackColor = True
         '
-        'pnlHelado
+        'dgvCarrito
         '
-        Me.pnlHelado.Controls.Add(Me.Label16)
-        Me.pnlHelado.Controls.Add(Me.btnHelado)
-        Me.pnlHelado.Location = New System.Drawing.Point(51, 131)
-        Me.pnlHelado.Name = "pnlHelado"
-        Me.pnlHelado.Size = New System.Drawing.Size(174, 174)
-        Me.pnlHelado.TabIndex = 3
+        Me.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCarrito.Location = New System.Drawing.Point(45, 68)
+        Me.dgvCarrito.Name = "dgvCarrito"
+        Me.dgvCarrito.RowHeadersWidth = 51
+        Me.dgvCarrito.RowTemplate.Height = 24
+        Me.dgvCarrito.Size = New System.Drawing.Size(605, 277)
+        Me.dgvCarrito.TabIndex = 9
         '
-        'Label16
+        'Label13
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Felix Titling", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(30, 3)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(94, 24)
-        Me.Label16.TabIndex = 1
-        Me.Label16.Text = "HELADO"
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("MS Reference Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(161, 15)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(399, 61)
+        Me.Label13.TabIndex = 8
+        Me.Label13.Text = "CARRITO DE COMPRAS"
         '
-        'btnHelado
+        'pnlindixInicio
         '
-        Me.btnHelado.BackColor = System.Drawing.Color.Gainsboro
-        Me.btnHelado.FlatAppearance.BorderSize = 0
-        Me.btnHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHelado.Image = Global.proyecto_de_semestre.My.Resources.Resources.helado
-        Me.btnHelado.Location = New System.Drawing.Point(3, 29)
-        Me.btnHelado.Name = "btnHelado"
-        Me.btnHelado.Size = New System.Drawing.Size(168, 144)
-        Me.btnHelado.TabIndex = 0
-        Me.btnHelado.UseVisualStyleBackColor = False
+        Me.pnlindixInicio.Controls.Add(Me.PictureBox1)
+        Me.pnlindixInicio.Controls.Add(Me.Label14)
+        Me.pnlindixInicio.Location = New System.Drawing.Point(197, 37)
+        Me.pnlindixInicio.Name = "pnlindixInicio"
+        Me.pnlindixInicio.Size = New System.Drawing.Size(683, 461)
+        Me.pnlindixInicio.TabIndex = 7
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.proyecto_de_semestre.My.Resources.Resources.LOGO_YEA
+        Me.PictureBox1.Location = New System.Drawing.Point(85, 86)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(434, 363)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Label14
+        '
+        Me.Label14.Font = New System.Drawing.Font("Sitka Banner", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(14, 30)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(653, 84)
+        Me.Label14.TabIndex = 0
+        Me.Label14.Text = "BIENVENIDOS A LA PARRILLA ARDIENTE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'pnlPastel
         '
@@ -769,52 +1095,194 @@ Partial Class frmMenu
         Me.btnPastel.TabIndex = 0
         Me.btnPastel.UseVisualStyleBackColor = False
         '
-        'pnlindixCarrito
+        'pnlHelado
         '
-        Me.pnlindixCarrito.AutoScroll = True
-        Me.pnlindixCarrito.Controls.Add(Me.Label13)
-        Me.pnlindixCarrito.Location = New System.Drawing.Point(197, 34)
-        Me.pnlindixCarrito.Name = "pnlindixCarrito"
-        Me.pnlindixCarrito.Size = New System.Drawing.Size(683, 461)
-        Me.pnlindixCarrito.TabIndex = 6
+        Me.pnlHelado.Controls.Add(Me.Label16)
+        Me.pnlHelado.Controls.Add(Me.btnHelado)
+        Me.pnlHelado.Location = New System.Drawing.Point(51, 131)
+        Me.pnlHelado.Name = "pnlHelado"
+        Me.pnlHelado.Size = New System.Drawing.Size(174, 174)
+        Me.pnlHelado.TabIndex = 3
         '
-        'Label13
+        'Label16
         '
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("MS Reference Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(161, 15)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(399, 61)
-        Me.Label13.TabIndex = 8
-        Me.Label13.Text = "CARRITO DE COMPRAS"
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Felix Titling", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(30, 3)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(94, 24)
+        Me.Label16.TabIndex = 1
+        Me.Label16.Text = "HELADO"
         '
-        'pnlindixNosotros
+        'btnHelado
         '
-        Me.pnlindixNosotros.Controls.Add(Me.PictureBox1)
-        Me.pnlindixNosotros.Controls.Add(Me.Label14)
-        Me.pnlindixNosotros.Location = New System.Drawing.Point(197, 37)
-        Me.pnlindixNosotros.Name = "pnlindixNosotros"
-        Me.pnlindixNosotros.Size = New System.Drawing.Size(683, 461)
-        Me.pnlindixNosotros.TabIndex = 7
+        Me.btnHelado.BackColor = System.Drawing.Color.Gainsboro
+        Me.btnHelado.FlatAppearance.BorderSize = 0
+        Me.btnHelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHelado.Image = Global.proyecto_de_semestre.My.Resources.Resources.helado
+        Me.btnHelado.Location = New System.Drawing.Point(3, 29)
+        Me.btnHelado.Name = "btnHelado"
+        Me.btnHelado.Size = New System.Drawing.Size(168, 144)
+        Me.btnHelado.TabIndex = 0
+        Me.btnHelado.UseVisualStyleBackColor = False
         '
-        'PictureBox1
+        'pnlPay
         '
-        Me.PictureBox1.Image = Global.proyecto_de_semestre.My.Resources.Resources.LOGO
-        Me.PictureBox1.Location = New System.Drawing.Point(217, 117)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(243, 208)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.pnlPay.Controls.Add(Me.Label15)
+        Me.pnlPay.Controls.Add(Me.btnPay)
+        Me.pnlPay.Location = New System.Drawing.Point(485, 131)
+        Me.pnlPay.Name = "pnlPay"
+        Me.pnlPay.Size = New System.Drawing.Size(174, 174)
+        Me.pnlPay.TabIndex = 2
         '
-        'Label14
+        'Label15
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("MS Reference Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(39, 20)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(571, 35)
-        Me.Label14.TabIndex = 0
-        Me.Label14.Text = "BIENVENIDOS AL RESTAURANTE WO"
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Felix Titling", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(60, 3)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(46, 24)
+        Me.Label15.TabIndex = 1
+        Me.Label15.Text = "PAY"
+        '
+        'btnPay
+        '
+        Me.btnPay.BackColor = System.Drawing.Color.Gainsboro
+        Me.btnPay.FlatAppearance.BorderSize = 0
+        Me.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPay.Image = Global.proyecto_de_semestre.My.Resources.Resources.pay
+        Me.btnPay.Location = New System.Drawing.Point(3, 35)
+        Me.btnPay.Name = "btnPay"
+        Me.btnPay.Size = New System.Drawing.Size(168, 126)
+        Me.btnPay.TabIndex = 0
+        Me.btnPay.UseVisualStyleBackColor = False
+        '
+        'btnAggPostre
+        '
+        Me.btnAggPostre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAggPostre.Location = New System.Drawing.Point(570, 419)
+        Me.btnAggPostre.Name = "btnAggPostre"
+        Me.btnAggPostre.Size = New System.Drawing.Size(100, 24)
+        Me.btnAggPostre.TabIndex = 21
+        Me.btnAggPostre.Text = "AGREGAR"
+        Me.btnAggPostre.UseVisualStyleBackColor = True
+        '
+        'Label35
+        '
+        Me.Label35.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(16, 316)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(114, 29)
+        Me.Label35.TabIndex = 22
+        Me.Label35.Text = "Cantidad"
+        '
+        'nudHelado
+        '
+        Me.nudHelado.Location = New System.Drawing.Point(119, 319)
+        Me.nudHelado.Name = "nudHelado"
+        Me.nudHelado.Size = New System.Drawing.Size(76, 22)
+        Me.nudHelado.TabIndex = 23
+        '
+        'Label34
+        '
+        Me.Label34.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(258, 316)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(114, 29)
+        Me.Label34.TabIndex = 24
+        Me.Label34.Text = "Cantidad"
+        '
+        'nudPastel
+        '
+        Me.nudPastel.Location = New System.Drawing.Point(361, 319)
+        Me.nudPastel.Name = "nudPastel"
+        Me.nudPastel.Size = New System.Drawing.Size(76, 22)
+        Me.nudPastel.TabIndex = 25
+        '
+        'Label33
+        '
+        Me.Label33.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(488, 316)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(114, 29)
+        Me.Label33.TabIndex = 26
+        Me.Label33.Text = "Cantidad"
+        '
+        'nudPay
+        '
+        Me.nudPay.Location = New System.Drawing.Point(594, 323)
+        Me.nudPay.Name = "nudPay"
+        Me.nudPay.Size = New System.Drawing.Size(76, 22)
+        Me.nudPay.TabIndex = 27
+        '
+        'pnlindixPostres
+        '
+        Me.pnlindixPostres.Controls.Add(Me.nudPay)
+        Me.pnlindixPostres.Controls.Add(Me.Label33)
+        Me.pnlindixPostres.Controls.Add(Me.nudPastel)
+        Me.pnlindixPostres.Controls.Add(Me.Label34)
+        Me.pnlindixPostres.Controls.Add(Me.nudHelado)
+        Me.pnlindixPostres.Controls.Add(Me.Label35)
+        Me.pnlindixPostres.Controls.Add(Me.btnAggPostre)
+        Me.pnlindixPostres.Controls.Add(Me.pnlPay)
+        Me.pnlindixPostres.Controls.Add(Me.pnlHelado)
+        Me.pnlindixPostres.Controls.Add(Me.pnlPastel)
+        Me.pnlindixPostres.Location = New System.Drawing.Point(197, 34)
+        Me.pnlindixPostres.Name = "pnlindixPostres"
+        Me.pnlindixPostres.Size = New System.Drawing.Size(683, 461)
+        Me.pnlindixPostres.TabIndex = 5
+        '
+        'pnlindixComentario
+        '
+        Me.pnlindixComentario.Controls.Add(Me.lblComentarios)
+        Me.pnlindixComentario.Controls.Add(Me.lblMensaje)
+        Me.pnlindixComentario.Controls.Add(Me.txtComentario)
+        Me.pnlindixComentario.Controls.Add(Me.btnMostrarComentario)
+        Me.pnlindixComentario.Controls.Add(Me.btnComentario)
+        Me.pnlindixComentario.Location = New System.Drawing.Point(200, 38)
+        Me.pnlindixComentario.Name = "pnlindixComentario"
+        Me.pnlindixComentario.Size = New System.Drawing.Size(683, 460)
+        Me.pnlindixComentario.TabIndex = 8
+        '
+        'lblComentarios
+        '
+        Me.lblComentarios.Location = New System.Drawing.Point(383, 85)
+        Me.lblComentarios.Name = "lblComentarios"
+        Me.lblComentarios.Size = New System.Drawing.Size(294, 252)
+        Me.lblComentarios.TabIndex = 9
+        '
+        'lblMensaje
+        '
+        Me.lblMensaje.Location = New System.Drawing.Point(3, 54)
+        Me.lblMensaje.Name = "lblMensaje"
+        Me.lblMensaje.Size = New System.Drawing.Size(273, 49)
+        Me.lblMensaje.TabIndex = 8
+        '
+        'txtComentario
+        '
+        Me.txtComentario.Location = New System.Drawing.Point(6, 108)
+        Me.txtComentario.Multiline = True
+        Me.txtComentario.Name = "txtComentario"
+        Me.txtComentario.Size = New System.Drawing.Size(318, 156)
+        Me.txtComentario.TabIndex = 7
+        '
+        'btnMostrarComentario
+        '
+        Me.btnMostrarComentario.Location = New System.Drawing.Point(512, 18)
+        Me.btnMostrarComentario.Name = "btnMostrarComentario"
+        Me.btnMostrarComentario.Size = New System.Drawing.Size(165, 39)
+        Me.btnMostrarComentario.TabIndex = 6
+        Me.btnMostrarComentario.Text = "Mostrar Comentario"
+        Me.btnMostrarComentario.UseVisualStyleBackColor = True
+        '
+        'btnComentario
+        '
+        Me.btnComentario.Location = New System.Drawing.Point(6, 12)
+        Me.btnComentario.Name = "btnComentario"
+        Me.btnComentario.Size = New System.Drawing.Size(165, 39)
+        Me.btnComentario.TabIndex = 5
+        Me.btnComentario.Text = "deja tu comentario"
+        Me.btnComentario.UseVisualStyleBackColor = True
         '
         'frmMenu
         '
@@ -823,10 +1291,11 @@ Partial Class frmMenu
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(883, 498)
         Me.Controls.Add(Me.pnlindixCarrito)
+        Me.Controls.Add(Me.pnlindixInicio)
+        Me.Controls.Add(Me.pnlindixComentario)
         Me.Controls.Add(Me.pnlindxComidas)
-        Me.Controls.Add(Me.pnlindixNosotros)
-        Me.Controls.Add(Me.pnlIndxBebidas)
         Me.Controls.Add(Me.pnlindixPostres)
+        Me.Controls.Add(Me.pnlIndxBebidas)
         Me.Controls.Add(Me.pnlTopSize)
         Me.Controls.Add(Me.pnlLeftSize)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -834,6 +1303,12 @@ Partial Class frmMenu
         Me.Text = "Form1"
         Me.pnlLeftSize.ResumeLayout(False)
         Me.pnlindxComidas.ResumeLayout(False)
+        CType(Me.nudHotDog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudNugget, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudBrochetas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudBurrito, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudHamburguesa, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudPizza, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlHotDog.ResumeLayout(False)
         Me.pnlHotDog.PerformLayout()
         Me.pnlNuggets.ResumeLayout(False)
@@ -847,6 +1322,12 @@ Partial Class frmMenu
         Me.pnlPizza.ResumeLayout(False)
         Me.pnlPizza.PerformLayout()
         Me.pnlIndxBebidas.ResumeLayout(False)
+        CType(Me.nudTe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudCerveza, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudAgua, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudCafe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudJugo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudRefresco, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTe.ResumeLayout(False)
         Me.pnlTe.PerformLayout()
         Me.pnlCerveza.ResumeLayout(False)
@@ -859,17 +1340,22 @@ Partial Class frmMenu
         Me.pnlJugos.PerformLayout()
         Me.pnlRefrescos.ResumeLayout(False)
         Me.pnlRefrescos.PerformLayout()
-        Me.pnlindixPostres.ResumeLayout(False)
-        Me.pnlPay.ResumeLayout(False)
-        Me.pnlPay.PerformLayout()
-        Me.pnlHelado.ResumeLayout(False)
-        Me.pnlHelado.PerformLayout()
+        Me.pnlindixCarrito.ResumeLayout(False)
+        CType(Me.dgvCarrito, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlindixInicio.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlPastel.ResumeLayout(False)
         Me.pnlPastel.PerformLayout()
-        Me.pnlindixCarrito.ResumeLayout(False)
-        Me.pnlindixNosotros.ResumeLayout(False)
-        Me.pnlindixNosotros.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlHelado.ResumeLayout(False)
+        Me.pnlHelado.PerformLayout()
+        Me.pnlPay.ResumeLayout(False)
+        Me.pnlPay.PerformLayout()
+        CType(Me.nudHelado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudPastel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudPay, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlindixPostres.ResumeLayout(False)
+        Me.pnlindixComentario.ResumeLayout(False)
+        Me.pnlindixComentario.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -883,7 +1369,7 @@ Partial Class frmMenu
     Friend WithEvents pnlPostres As Panel
     Friend WithEvents btnPostres As Button
     Friend WithEvents pnlNosotros As Panel
-    Friend WithEvents btnNosotros As Button
+    Friend WithEvents btnInicio As Button
     Friend WithEvents pnlCarrito As Panel
     Friend WithEvents btnCarrito As Button
     Friend WithEvents pnlindxComidas As Panel
@@ -924,20 +1410,64 @@ Partial Class frmMenu
     Friend WithEvents pnlRefrescos As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents btnRefresco As Button
-    Friend WithEvents pnlindixPostres As Panel
-    Friend WithEvents pnlPay As Panel
-    Friend WithEvents Label15 As Label
-    Friend WithEvents btnPay As Button
-    Friend WithEvents pnlHelado As Panel
-    Friend WithEvents Label16 As Label
-    Friend WithEvents btnHelado As Button
+    Friend WithEvents pnlindixCarrito As Panel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents pnlindixInicio As Panel
+    Friend WithEvents Label14 As Label
+    Friend WithEvents btnAggComida As Button
+    Friend WithEvents nudPizza As NumericUpDown
+    Friend WithEvents Label18 As Label
+    Friend WithEvents nudHotDog As NumericUpDown
+    Friend WithEvents Label21 As Label
+    Friend WithEvents nudNugget As NumericUpDown
+    Friend WithEvents Label22 As Label
+    Friend WithEvents nudBrochetas As NumericUpDown
+    Friend WithEvents Label23 As Label
+    Friend WithEvents nudBurrito As NumericUpDown
+    Friend WithEvents Label20 As Label
+    Friend WithEvents nudHamburguesa As NumericUpDown
+    Friend WithEvents Label19 As Label
+    Friend WithEvents nudTe As NumericUpDown
+    Friend WithEvents Label24 As Label
+    Friend WithEvents nudCerveza As NumericUpDown
+    Friend WithEvents Label25 As Label
+    Friend WithEvents nudAgua As NumericUpDown
+    Friend WithEvents Label26 As Label
+    Friend WithEvents nudCafe As NumericUpDown
+    Friend WithEvents Label27 As Label
+    Friend WithEvents nudJugo As NumericUpDown
+    Friend WithEvents Label28 As Label
+    Friend WithEvents nudRefresco As NumericUpDown
+    Friend WithEvents Label29 As Label
+    Friend WithEvents btnAggBebidas As Button
+    Friend WithEvents dgvCarrito As DataGridView
     Friend WithEvents pnlPastel As Panel
     Friend WithEvents Label17 As Label
     Friend WithEvents btnPastel As Button
-    Friend WithEvents pnlindixCarrito As Panel
-    Friend WithEvents Label13 As Label
-    Friend WithEvents pnlindixNosotros As Panel
-    Friend WithEvents Label14 As Label
+    Friend WithEvents pnlHelado As Panel
+    Friend WithEvents Label16 As Label
+    Friend WithEvents btnHelado As Button
+    Friend WithEvents pnlPay As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents btnPay As Button
+    Friend WithEvents btnAggPostre As Button
+    Friend WithEvents Label35 As Label
+    Friend WithEvents nudHelado As NumericUpDown
+    Friend WithEvents Label34 As Label
+    Friend WithEvents nudPastel As NumericUpDown
+    Friend WithEvents Label33 As Label
+    Friend WithEvents nudPay As NumericUpDown
+    Friend WithEvents pnlindixPostres As Panel
+    Friend WithEvents btnSumaTotal As Button
+    Friend WithEvents btnPago As Button
+    Friend WithEvents lblMostrarPago As Label
+    Friend WithEvents pnlComentarios As Panel
+    Friend WithEvents btnComentarios As Button
+    Friend WithEvents pnlindixComentario As Panel
+    Friend WithEvents lblComentarios As Label
+    Friend WithEvents lblMensaje As Label
+    Friend WithEvents txtComentario As TextBox
+    Friend WithEvents btnMostrarComentario As Button
+    Friend WithEvents btnComentario As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnAggComida As Button
 End Class
