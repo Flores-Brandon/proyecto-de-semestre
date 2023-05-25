@@ -1,8 +1,12 @@
 ﻿Imports System.IO
+Imports System.Security.Cryptography.X509Certificates
+
 Public Class frmMenu
     Private comentarios As List(Of String) = New List(Of String)()
     Private archivoComentarios As String = "comentarios.txt"
-
+    Private pedidoComida As New Comida()
+    Private pedidoBebidas As New Bebidas()
+    Private pedidoPostres As New Postres()
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Agregar las columnas al DataGridView
@@ -10,11 +14,28 @@ Public Class frmMenu
         dgvCarrito.Columns.Add("Cantidad", "Cantidad")
         dgvCarrito.Columns.Add("Precio Unitario", "Precio Unitario")
         dgvCarrito.Columns.Add("Precio Total", "Precio Total")
+        dgvCarrito.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells ' Ajusta automáticamente el tamaño de la primera columna basado en el contenido
+        dgvCarrito.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill ' Ajusta automáticamente el tamaño de la segunda columna para llenar el espacio restante
 
         CargarComentarios()
 
     End Sub
+    Private Sub btnOrdenar_Click(sender As Object, e As EventArgs) Handles btnOrdenar.Click
+        ' Adjust the height of the pnlPasar a Recoger panel to match the height of the btnComida button
+        pnlOrdenar.Height = btnOrdenar.Height
 
+        ' Position the pnlComida panel at the top of the btnComida button
+        pnlOrdenar.Top = btnOrdenar.Height
+
+        ' Show the pnlindxComidas panel and hide the other panels
+        pnlindxComidas.Visible = False
+        pnlIndxBebidas.Visible = False
+        pnlindixPostres.Visible = False
+        pnlindixCarrito.Visible = False
+        pnlindixInicio.Visible = False
+        pnlindixComentario.Visible = False
+        pnlindixOrdenar.Visible = True
+    End Sub
     Private Sub btnComida_Click(sender As Object, e As EventArgs) Handles btnComida.Click
 
         ' Adjust the height of the pnlComida panel to match the height of the btnComida button
@@ -30,6 +51,7 @@ Public Class frmMenu
         pnlindixCarrito.Visible = False
         pnlindixInicio.Visible = False
         pnlindixComentario.Visible = False
+        pnlindixOrdenar.Visible = False
 
     End Sub
 
@@ -47,6 +69,7 @@ Public Class frmMenu
         pnlindixCarrito.Visible = False
         pnlindixInicio.Visible = False
         pnlindixComentario.Visible = False
+        pnlindixOrdenar.Visible = False
 
     End Sub
     Private Sub btnPostres_Click(sender As Object, e As EventArgs) Handles btnPostres.Click
@@ -63,7 +86,7 @@ Public Class frmMenu
         pnlindixCarrito.Visible = False
         pnlindixInicio.Visible = False
         pnlindixComentario.Visible = False
-
+        pnlindixOrdenar.Visible = False
     End Sub
 
     Private Sub btnCarrito_Click(sender As Object, e As EventArgs) Handles btnCarrito.Click
@@ -80,7 +103,7 @@ Public Class frmMenu
         pnlindixCarrito.Visible = True
         pnlindixInicio.Visible = False
         pnlindixComentario.Visible = False
-
+        pnlindixOrdenar.Visible = False
     End Sub
 
     Private Sub btnNosotros_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
@@ -97,7 +120,7 @@ Public Class frmMenu
         pnlindixCarrito.Visible = False
         pnlindixInicio.Visible = True
         pnlindixComentario.Visible = False
-
+        pnlindixOrdenar.Visible = False
     End Sub
     Private Sub btnComentarios_Click(sender As Object, e As EventArgs) Handles btnComentarios.Click
         ' Adjust the height of the pnlComentarios panel to match the height of the btnInicio button
@@ -113,11 +136,27 @@ Public Class frmMenu
         pnlindixCarrito.Visible = False
         pnlindixInicio.Visible = False
         pnlindixComentario.Visible = True
-
+        pnlindixOrdenar.Visible = False
 
     End Sub
-
-
+    'Creeamos el evento para cuando seleccione una cantidad en el nud a la hora de precionar agregar al carrito los regrese al valor 0
+    Private Sub LimpiarV()
+        nudAgua.Value = 0
+        nudBrochetas.Value = 0
+        nudBurrito.Value = 0
+        nudCafe.Value = 0
+        nudCerveza.Value = 0
+        nudHamburguesa.Value = 0
+        nudHelado.Value = 0
+        nudHotDog.Value = 0
+        nudJugo.Value = 0
+        nudNugget.Value = 0
+        nudPastel.Value = 0
+        nudPay.Value = 0
+        nudPizza.Value = 0
+        nudRefresco.Value = 0
+        nudTe.Value = 0
+    End Sub
 
     Private Sub btnAggComida_Click(sender As Object, e As EventArgs) Handles btnAggComida.Click
         ' Get the amounts of the NumericUpDown
@@ -163,6 +202,8 @@ Public Class frmMenu
         If nuggetCantidad > 0 Then
             dgvCarrito.Rows.Add("Nuggets", nuggetCantidad, compra.Nuggets, nuggetPrecioTotal)
         End If
+        'Agregamos el evento llamado LimpiarV
+        LimpiarV()
     End Sub
 
     Private Sub btnAggBebidas_Click(sender As Object, e As EventArgs) Handles btnAggBebidas.Click
@@ -204,6 +245,8 @@ Public Class frmMenu
         If TeCantidad > 0 Then
             dgvCarrito.Rows.Add("Té Helado", TeCantidad, compra.Té, TePrecioTotal)
         End If
+        'Agregamos el evento llamado LimpiarV
+        LimpiarV()
     End Sub
 
     Private Sub btnAggPostre_Click(sender As Object, e As EventArgs) Handles btnAggPostre.Click
@@ -232,6 +275,8 @@ Public Class frmMenu
         If PayCantidad > 0 Then
             dgvCarrito.Rows.Add("Pay", PayCantidad, compra.Pay, PayPrecioTotal)
         End If
+        'Agregamos el evento llamado LimpiarV
+        LimpiarV()
     End Sub
 
     Private Sub btnPago_Click(sender As Object, e As EventArgs) Handles btnPago.Click
@@ -437,6 +482,194 @@ Public Class frmMenu
         ' Save the comments to the comments file
         File.WriteAllLines(archivoComentarios, comentarios)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Application.Exit()
+        ' Closes the application.
+    End Sub
+
+    Private Sub btnAggComidas_Click(sender As Object, e As EventArgs) Handles btnAggComidas.Click
+        ' Event handler for the "Agregar Comidas" button click.
+
+        pedidoComida.MostrarTiposPlatillos()
+        ' Calls the MostrarTiposPlatillos method of the pedidoComida object to display the available food options.
+
+        Dim seleccion As Integer
+        ' Variable to store the user's selection.
+
+        If Integer.TryParse(InputBox("Ingrese el número del platillo que desea agregar:", "Agregar Platillo"), seleccion) Then
+            ' Prompts the user to enter the number of the food item they want to add and tries to parse it as an integer.
+
+            Dim platillo As String = pedidoComida.SeleccionarPlatillo(seleccion)
+            ' Calls the SeleccionarPlatillo method of the pedidoComida object to retrieve the selected food item based on the user's input.
+
+            If Not String.IsNullOrWhiteSpace(platillo) Then
+                ' Checks if the selected food item is not empty or null.
+
+                Dim cantidad As Integer
+                ' Variable to store the quantity of the selected food item.
+
+                If Integer.TryParse(InputBox($"Ingrese la cantidad de {platillo}:", "Agregar Cantidad"), cantidad) Then
+                    ' Prompts the user to enter the quantity of the selected food item and tries to parse it as an integer.
+
+                    pedidoComida.AgregarPlatillo(platillo, cantidad)
+                    ' Calls the AgregarPlatillo method of the pedidoComida object to add the selected food item with the specified quantity.
+
+                    MessageBox.Show($"Se ha seleccionado {cantidad} {platillo}(s).")
+                    ' Displays a message box indicating the successful selection of the food item.
+
+                Else
+                    MessageBox.Show("Cantidad inválida. Intente nuevamente.")
+                    ' Displays an error message if the entered quantity is invalid (not a valid integer).
+
+                End If
+            Else
+                MessageBox.Show("Platillo inválido. Intente nuevamente.")
+                ' Displays an error message if the selected food item is invalid (not found in the available options).
+
+            End If
+        Else
+            MessageBox.Show("Selección inválida. Intente nuevamente.")
+            ' Displays an error message if the entered selection is invalid (not a valid integer).
+
+        End If
+    End Sub
+
+    Private Sub btnAggBebida_Click(sender As Object, e As EventArgs) Handles btnAggBebida.Click
+        ' Event handler for the "Agregar Bebida" button click.
+
+        pedidoBebidas.MostrarTiposPlatillos()
+        ' Calls the MostrarTiposPlatillos method of the pedidoBebidas object to display the available drink options.
+
+        Dim seleccion As Integer
+        ' Variable to store the user's selection.
+
+        If Integer.TryParse(InputBox("Ingrese el número de la bebida que desea agregar:", "Agregar Bebida"), seleccion) Then
+            ' Prompts the user to enter the number of the drink item they want to add and tries to parse it as an integer.
+
+            Dim bebida As String = pedidoBebidas.SeleccionarPlatillo(seleccion)
+            ' Calls the SeleccionarPlatillo method of the pedidoBebidas object to retrieve the selected drink item based on the user's input.
+
+            If Not String.IsNullOrWhiteSpace(bebida) Then
+                ' Checks if the selected drink item is not empty or null.
+
+                Dim cantidad As Integer
+                ' Variable to store the quantity of the selected drink item.
+
+                If Integer.TryParse(InputBox($"Ingrese la cantidad de {bebida}:", "Agregar Cantidad"), cantidad) Then
+                    ' Prompts the user to enter the quantity of the selected drink item and tries to parse it as an integer.
+
+                    pedidoBebidas.AgregarPlatillo(bebida, cantidad)
+                    ' Calls the AgregarPlatillo method of the pedidoBebidas object to add the selected drink item with the specified quantity.
+
+                    MessageBox.Show($"Se ha seleccionado {cantidad} {bebida}(s).")
+                    ' Displays a message box indicating the successful selection of the drink item.
+
+                Else
+                    MessageBox.Show("Cantidad inválida. Intente nuevamente.")
+                    ' Displays an error message if the entered quantity is invalid (not a valid integer).
+
+                End If
+            Else
+                MessageBox.Show("Bebida inválida. Intente nuevamente.")
+                ' Displays an error message if the selected drink item is invalid (not found in the available options).
+
+            End If
+        Else
+            MessageBox.Show("Selección inválida. Intente nuevamente.")
+            ' Displays an error message if the entered selection is invalid (not a valid integer).
+
+        End If
+    End Sub
+
+    Private Sub btnAggPostres_Click(sender As Object, e As EventArgs) Handles btnAggPostres.Click
+        ' Event handler for the "Agregar Postre" button click.
+
+        pedidoPostres.MostrarTiposPlatillos()
+        ' Calls the MostrarTiposPlatillos method of the pedidoPostres object to display the available dessert options.
+
+        Dim seleccion As Integer
+        ' Variable to store the user's selection.
+
+        If Integer.TryParse(InputBox("Ingrese el número del postre que desea agregar:", "Agregar Postre"), seleccion) Then
+            ' Prompts the user to enter the number of the dessert item they want to add and tries to parse it as an integer.
+
+            Dim postre As String = pedidoPostres.SeleccionarPlatillo(seleccion)
+            ' Calls the SeleccionarPlatillo method of the pedidoPostres object to retrieve the selected dessert item based on the user's input.
+
+            If Not String.IsNullOrWhiteSpace(postre) Then
+                ' Checks if the selected dessert item is not empty or null.
+
+                Dim cantidad As Integer
+                ' Variable to store the quantity of the selected dessert item.
+
+                If Integer.TryParse(InputBox($"Ingrese la cantidad de {postre}:", "Agregar Cantidad"), cantidad) Then
+                    ' Prompts the user to enter the quantity of the selected dessert item and tries to parse it as an integer.
+
+                    pedidoPostres.AgregarPlatillo(postre, cantidad)
+                    ' Calls the AgregarPlatillo method of the pedidoPostres object to add the selected dessert item with the specified quantity.
+
+                    MessageBox.Show($"Se ha seleccionado {cantidad} {postre}(s).")
+                    ' Displays a message box indicating the successful selection of the dessert item.
+
+                Else
+                    MessageBox.Show("Cantidad inválida. Intente nuevamente.")
+                    ' Displays an error message if the entered quantity is invalid (not a valid integer).
+
+                End If
+            Else
+                MessageBox.Show("Postre inválido. Intente nuevamente.")
+                ' Displays an error message if the selected dessert item is invalid (not found in the available options).
+
+            End If
+        Else
+            MessageBox.Show("Selección inválida. Intente nuevamente.")
+            ' Displays an error message if the entered selection is invalid (not a valid integer).
+
+        End If
+    End Sub
+
+
+    Private Sub btnOrden_Click(sender As Object, e As EventArgs) Handles btnOrden.Click
+        ' Event handler for the "Orden" button click.
+
+        ' Retrieve customer information
+        Dim nombre As String = txtName.Text.Trim()
+        Dim telefono As String = txtNumeroTelefonico.Text.Trim()
+        Dim hora As String = txtHora.Text.Trim()
+
+        ' Retrieve the order details from each category
+        Dim ordenComida As List(Of String) = pedidoComida.ObtenerOrden()
+        Dim ordenBebidas As List(Of String) = pedidoBebidas.ObtenerOrden()
+        Dim ordenPostres As List(Of String) = pedidoPostres.ObtenerOrden()
+
+        ' Calculate the total sum of the order
+        Dim total As Decimal = pedidoComida.CalcularTotal() + pedidoBebidas.CalcularTotal() + pedidoPostres.CalcularTotal()
+
+        ' Build the order message
+        Dim mensaje As String = $"Nombre: {nombre}" & vbCrLf
+        mensaje += $"Teléfono: {telefono}" & vbCrLf
+        mensaje += $"Hora: {hora}" & vbCrLf
+        mensaje += vbCrLf
+        mensaje += "Orden:" & vbCrLf
+        mensaje += "Comida:" & vbCrLf
+        mensaje += If(ordenComida.Count > 0, String.Join(vbCrLf, ordenComida), "No se ha seleccionado comida") & vbCrLf
+        mensaje += "Bebidas:" & vbCrLf
+        mensaje += If(ordenBebidas.Count > 0, String.Join(vbCrLf, ordenBebidas), "No se ha seleccionado bebida") & vbCrLf
+        mensaje += "Postres:" & vbCrLf
+        mensaje += If(ordenPostres.Count > 0, String.Join(vbCrLf, ordenPostres), "No se ha seleccionado postre") & vbCrLf
+        mensaje += vbCrLf
+        mensaje += $"Total: ${total.ToString("0.00")}"
+
+        ' Display the order message in a message box
+        MessageBox.Show(mensaje, "Orden", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim camara As New Camara()
+        camara.Show()
+    End Sub
+
 
 End Class
 

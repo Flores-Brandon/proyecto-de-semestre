@@ -23,6 +23,8 @@ Partial Class frmMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.pnlLeftSize = New System.Windows.Forms.Panel()
+        Me.pnlOrdenar = New System.Windows.Forms.Panel()
+        Me.btnOrdenar = New System.Windows.Forms.Button()
         Me.pnlComentarios = New System.Windows.Forms.Panel()
         Me.btnComentarios = New System.Windows.Forms.Button()
         Me.pnlBebidas = New System.Windows.Forms.Panel()
@@ -107,6 +109,7 @@ Partial Class frmMenu
         Me.dgvCarrito = New System.Windows.Forms.DataGridView()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.pnlindixInicio = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.pnlPastel = New System.Windows.Forms.Panel()
@@ -127,11 +130,24 @@ Partial Class frmMenu
         Me.nudPay = New System.Windows.Forms.NumericUpDown()
         Me.pnlindixPostres = New System.Windows.Forms.Panel()
         Me.pnlindixComentario = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.lblComentarios = New System.Windows.Forms.Label()
         Me.lblMensaje = New System.Windows.Forms.Label()
         Me.txtComentario = New System.Windows.Forms.TextBox()
         Me.btnMostrarComentario = New System.Windows.Forms.Button()
         Me.btnComentario = New System.Windows.Forms.Button()
+        Me.pnlindixOrdenar = New System.Windows.Forms.Panel()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnOrden = New System.Windows.Forms.Button()
+        Me.txtNumeroTelefonico = New System.Windows.Forms.TextBox()
+        Me.txtHora = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.btnAggPostres = New System.Windows.Forms.Button()
+        Me.btnAggBebida = New System.Windows.Forms.Button()
+        Me.btnAggComidas = New System.Windows.Forms.Button()
         Me.pnlLeftSize.SuspendLayout()
         Me.pnlindxComidas.SuspendLayout()
         CType(Me.nudHotDog, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,11 +187,14 @@ Partial Class frmMenu
         CType(Me.nudPay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlindixPostres.SuspendLayout()
         Me.pnlindixComentario.SuspendLayout()
+        Me.pnlindixOrdenar.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlLeftSize
         '
         Me.pnlLeftSize.BackColor = System.Drawing.Color.Red
+        Me.pnlLeftSize.Controls.Add(Me.pnlOrdenar)
+        Me.pnlLeftSize.Controls.Add(Me.btnOrdenar)
         Me.pnlLeftSize.Controls.Add(Me.pnlComentarios)
         Me.pnlLeftSize.Controls.Add(Me.btnComentarios)
         Me.pnlLeftSize.Controls.Add(Me.pnlBebidas)
@@ -193,6 +212,30 @@ Partial Class frmMenu
         Me.pnlLeftSize.Name = "pnlLeftSize"
         Me.pnlLeftSize.Size = New System.Drawing.Size(200, 498)
         Me.pnlLeftSize.TabIndex = 0
+        '
+        'pnlOrdenar
+        '
+        Me.pnlOrdenar.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.pnlOrdenar.Location = New System.Drawing.Point(0, 92)
+        Me.pnlOrdenar.Name = "pnlOrdenar"
+        Me.pnlOrdenar.Size = New System.Drawing.Size(10, 45)
+        Me.pnlOrdenar.TabIndex = 15
+        '
+        'btnOrdenar
+        '
+        Me.btnOrdenar.FlatAppearance.BorderSize = 0
+        Me.btnOrdenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOrdenar.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrdenar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnOrdenar.Image = Global.proyecto_de_semestre.My.Resources.Resources.pngwing_com__2_
+        Me.btnOrdenar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnOrdenar.Location = New System.Drawing.Point(12, 92)
+        Me.btnOrdenar.Name = "btnOrdenar"
+        Me.btnOrdenar.Size = New System.Drawing.Size(203, 46)
+        Me.btnOrdenar.TabIndex = 14
+        Me.btnOrdenar.Text = "       Recoger"
+        Me.btnOrdenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnOrdenar.UseVisualStyleBackColor = True
         '
         'pnlComentarios
         '
@@ -265,7 +308,7 @@ Partial Class frmMenu
         'pnlNosotros
         '
         Me.pnlNosotros.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.pnlNosotros.Location = New System.Drawing.Point(0, 31)
+        Me.pnlNosotros.Location = New System.Drawing.Point(0, 3)
         Me.pnlNosotros.Name = "pnlNosotros"
         Me.pnlNosotros.Size = New System.Drawing.Size(10, 45)
         Me.pnlNosotros.TabIndex = 7
@@ -278,7 +321,7 @@ Partial Class frmMenu
         Me.btnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnInicio.Image = Global.proyecto_de_semestre.My.Resources.Resources.nosotros
         Me.btnInicio.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnInicio.Location = New System.Drawing.Point(12, 34)
+        Me.btnInicio.Location = New System.Drawing.Point(12, 6)
         Me.btnInicio.Name = "btnInicio"
         Me.btnInicio.Size = New System.Drawing.Size(220, 45)
         Me.btnInicio.TabIndex = 6
@@ -1039,12 +1082,22 @@ Partial Class frmMenu
         '
         'pnlindixInicio
         '
+        Me.pnlindixInicio.Controls.Add(Me.Button1)
         Me.pnlindixInicio.Controls.Add(Me.PictureBox1)
         Me.pnlindixInicio.Controls.Add(Me.Label14)
         Me.pnlindixInicio.Location = New System.Drawing.Point(197, 37)
         Me.pnlindixInicio.Name = "pnlindixInicio"
         Me.pnlindixInicio.Size = New System.Drawing.Size(683, 461)
         Me.pnlindixInicio.TabIndex = 7
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(535, 375)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 53)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "CERRAR APP"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -1234,6 +1287,7 @@ Partial Class frmMenu
         '
         'pnlindixComentario
         '
+        Me.pnlindixComentario.Controls.Add(Me.Button2)
         Me.pnlindixComentario.Controls.Add(Me.lblComentarios)
         Me.pnlindixComentario.Controls.Add(Me.lblMensaje)
         Me.pnlindixComentario.Controls.Add(Me.txtComentario)
@@ -1243,6 +1297,15 @@ Partial Class frmMenu
         Me.pnlindixComentario.Name = "pnlindixComentario"
         Me.pnlindixComentario.Size = New System.Drawing.Size(683, 460)
         Me.pnlindixComentario.TabIndex = 8
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(175, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(165, 39)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "deja tu comentario y foto"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'lblComentarios
         '
@@ -1272,7 +1335,7 @@ Partial Class frmMenu
         Me.btnMostrarComentario.Name = "btnMostrarComentario"
         Me.btnMostrarComentario.Size = New System.Drawing.Size(165, 39)
         Me.btnMostrarComentario.TabIndex = 6
-        Me.btnMostrarComentario.Text = "Mostrar Comentario"
+        Me.btnMostrarComentario.Text = "Mostrar Comentarios"
         Me.btnMostrarComentario.UseVisualStyleBackColor = True
         '
         'btnComentario
@@ -1284,15 +1347,134 @@ Partial Class frmMenu
         Me.btnComentario.Text = "deja tu comentario"
         Me.btnComentario.UseVisualStyleBackColor = True
         '
+        'pnlindixOrdenar
+        '
+        Me.pnlindixOrdenar.Controls.Add(Me.btnEliminar)
+        Me.pnlindixOrdenar.Controls.Add(Me.btnOrden)
+        Me.pnlindixOrdenar.Controls.Add(Me.txtNumeroTelefonico)
+        Me.pnlindixOrdenar.Controls.Add(Me.txtHora)
+        Me.pnlindixOrdenar.Controls.Add(Me.txtName)
+        Me.pnlindixOrdenar.Controls.Add(Me.Label30)
+        Me.pnlindixOrdenar.Controls.Add(Me.Label31)
+        Me.pnlindixOrdenar.Controls.Add(Me.lblNombre)
+        Me.pnlindixOrdenar.Controls.Add(Me.btnAggPostres)
+        Me.pnlindixOrdenar.Controls.Add(Me.btnAggBebida)
+        Me.pnlindixOrdenar.Controls.Add(Me.btnAggComidas)
+        Me.pnlindixOrdenar.Location = New System.Drawing.Point(197, 37)
+        Me.pnlindixOrdenar.Name = "pnlindixOrdenar"
+        Me.pnlindixOrdenar.Size = New System.Drawing.Size(683, 461)
+        Me.pnlindixOrdenar.TabIndex = 9
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(462, 288)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(140, 35)
+        Me.btnEliminar.TabIndex = 20
+        Me.btnEliminar.Text = "Eliminar orden"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'btnOrden
+        '
+        Me.btnOrden.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrden.Location = New System.Drawing.Point(462, 365)
+        Me.btnOrden.Name = "btnOrden"
+        Me.btnOrden.Size = New System.Drawing.Size(143, 35)
+        Me.btnOrden.TabIndex = 19
+        Me.btnOrden.Text = "Confirmar Orden"
+        Me.btnOrden.UseVisualStyleBackColor = True
+        '
+        'txtNumeroTelefonico
+        '
+        Me.txtNumeroTelefonico.Location = New System.Drawing.Point(318, 117)
+        Me.txtNumeroTelefonico.Multiline = True
+        Me.txtNumeroTelefonico.Name = "txtNumeroTelefonico"
+        Me.txtNumeroTelefonico.Size = New System.Drawing.Size(202, 27)
+        Me.txtNumeroTelefonico.TabIndex = 18
+        '
+        'txtHora
+        '
+        Me.txtHora.Location = New System.Drawing.Point(318, 196)
+        Me.txtHora.Multiline = True
+        Me.txtHora.Name = "txtHora"
+        Me.txtHora.Size = New System.Drawing.Size(202, 31)
+        Me.txtHora.TabIndex = 17
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(317, 58)
+        Me.txtName.Multiline = True
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(202, 28)
+        Me.txtName.TabIndex = 16
+        '
+        'Label30
+        '
+        Me.Label30.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(46, 185)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(179, 62)
+        Me.Label30.TabIndex = 15
+        Me.Label30.Text = "A Que Hora le Gustaria Recoger" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Label31
+        '
+        Me.Label31.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(46, 104)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(163, 63)
+        Me.Label31.TabIndex = 14
+        Me.Label31.Text = "Numero De Telefono"
+        '
+        'lblNombre
+        '
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(48, 58)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(124, 28)
+        Me.lblNombre.TabIndex = 13
+        Me.lblNombre.Text = "Nombre"
+        '
+        'btnAggPostres
+        '
+        Me.btnAggPostres.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAggPostres.Location = New System.Drawing.Point(45, 373)
+        Me.btnAggPostres.Name = "btnAggPostres"
+        Me.btnAggPostres.Size = New System.Drawing.Size(217, 39)
+        Me.btnAggPostres.TabIndex = 12
+        Me.btnAggPostres.Text = "Agregar Postres"
+        Me.btnAggPostres.UseVisualStyleBackColor = True
+        '
+        'btnAggBebida
+        '
+        Me.btnAggBebida.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAggBebida.Location = New System.Drawing.Point(45, 329)
+        Me.btnAggBebida.Name = "btnAggBebida"
+        Me.btnAggBebida.Size = New System.Drawing.Size(217, 38)
+        Me.btnAggBebida.TabIndex = 11
+        Me.btnAggBebida.Text = "Agregar Bebidas"
+        Me.btnAggBebida.UseVisualStyleBackColor = True
+        '
+        'btnAggComidas
+        '
+        Me.btnAggComidas.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAggComidas.Location = New System.Drawing.Point(45, 280)
+        Me.btnAggComidas.Name = "btnAggComidas"
+        Me.btnAggComidas.Size = New System.Drawing.Size(217, 43)
+        Me.btnAggComidas.TabIndex = 10
+        Me.btnAggComidas.Text = "Agregar Comidas"
+        Me.btnAggComidas.UseVisualStyleBackColor = True
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(883, 498)
-        Me.Controls.Add(Me.pnlindixCarrito)
-        Me.Controls.Add(Me.pnlindixInicio)
+        Me.Controls.Add(Me.pnlindixOrdenar)
         Me.Controls.Add(Me.pnlindixComentario)
+        Me.Controls.Add(Me.pnlindixInicio)
+        Me.Controls.Add(Me.pnlindixCarrito)
         Me.Controls.Add(Me.pnlindxComidas)
         Me.Controls.Add(Me.pnlindixPostres)
         Me.Controls.Add(Me.pnlIndxBebidas)
@@ -1356,6 +1538,8 @@ Partial Class frmMenu
         Me.pnlindixPostres.ResumeLayout(False)
         Me.pnlindixComentario.ResumeLayout(False)
         Me.pnlindixComentario.PerformLayout()
+        Me.pnlindixOrdenar.ResumeLayout(False)
+        Me.pnlindixOrdenar.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1470,4 +1654,20 @@ Partial Class frmMenu
     Friend WithEvents btnMostrarComentario As Button
     Friend WithEvents btnComentario As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents pnlOrdenar As Panel
+    Friend WithEvents btnOrdenar As Button
+    Friend WithEvents pnlindixOrdenar As Panel
+    Friend WithEvents btnOrden As Button
+    Friend WithEvents txtNumeroTelefonico As TextBox
+    Friend WithEvents txtHora As TextBox
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents btnAggPostres As Button
+    Friend WithEvents btnAggBebida As Button
+    Friend WithEvents btnAggComidas As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents Button2 As Button
 End Class
